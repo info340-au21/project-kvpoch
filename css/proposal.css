@@ -14,8 +14,12 @@ li {
     color: white;
 }
 
-h1, h2 {
+h1 {
     color: white;
+}
+
+h2 {
+    background-color: #B7A57A;
 }
 
 a {
@@ -26,4 +30,5 @@ a {
     padding: 5px;
     margin: 15px;
     border: 40px;
+    background-color: black;
 }
