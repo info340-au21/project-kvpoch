@@ -32,3 +32,8 @@ a {
     border: 40px;
     background-color: black;
 }
+
+img {
+    height: 800px;
+    width: 1000px;
+}
