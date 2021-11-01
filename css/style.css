@@ -1,0 +1,60 @@
+html {
+
+}
+
+body {
+
+}
+
+header {
+    background-color: #4b2e83;
+}
+
+header h1 {
+    margin: 5px;
+    border: 5px;
+    padding: 10px;
+    color: white;
+}
+
+nav {
+    right:10px;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.card-box {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    height: 400px;
+    margin: 10px;
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 7px;
+    flex: 0 0 250px;
+}
+
+.card-content {
+    padding: 5px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4b2e83;
+    color: white;
+    text-align: center;
+}
+
