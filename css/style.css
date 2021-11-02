@@ -58,3 +58,43 @@ footer {
     text-align: center;
 }
 
+
+.resize {
+    width: 80%;
+    height: 50%;
+}
+
+.flexMap {
+    flex-basis: auto;
+  }
+
+  .flexFilterBy {
+    flex-basis: auto;
+    padding: 5px;
+    
+
+  }
+
+  
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+   
+  }
+
+  .checkmark {
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    
+  }
