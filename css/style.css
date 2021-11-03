@@ -22,11 +22,20 @@ header h1 {
 nav {
     right:10px;
     padding: 10px;
+    font-size: large;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+}
+
+.top-nav {
+    display: flex;
+}
+
+.top-nav-content {
+    margin-right: 20px;
 }
 
 .card-box {
