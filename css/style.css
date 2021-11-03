@@ -8,6 +8,8 @@ body {
 
 header {
     background-color: #4b2e83;
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 header h1 {
@@ -42,10 +44,27 @@ nav a {
     border-radius: 10px;
     padding: 7px;
     flex: 0 0 250px;
+
+}
+
+.card a {
+    text-decoration: none;
 }
 
 .card-content {
     padding: 5px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.card-content img {
+    height: 20em;
+    width: 20em;
+    border-radius: 10px;
+}
+
+.card-content p {
+    font-size: 1.2em;
 }
 
 footer {
@@ -68,33 +87,31 @@ footer {
     flex-basis: auto;
   }
 
-  .flexFilterBy {
+.flexFilterBy {
     flex-basis: auto;
     padding: 5px;
-    
-
-  }
+}
 
   
-  .flex-container {
+.flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
+}
 
-  .container {
+.container {
     display: block;
     position: relative;
     margin-bottom: 15px;
     cursor: pointer;
     font-size: 20px;
    
-  }
+}
 
-  .checkmark {
+.checkmark {
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
     
-  }
+}
