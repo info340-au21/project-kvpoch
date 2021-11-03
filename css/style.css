@@ -77,6 +77,7 @@ nav a {
 }
 
 footer {
+    font-family: 'Noto Sans', sans-serif;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -94,27 +95,38 @@ footer {
 
 .flexMap {
     flex-basis: auto;
+    width: 40em;
+    height: 60em;
   }
 
 .flexFilterBy {
+    font-family: 'Noto Sans', sans-serif;
     flex-basis: auto;
     padding: 5px;
 }
 
+.flexFilterBy h3 {
+    font-size: 1.8em;
+}
   
 .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.flex-container img {
+    border-radius: 10px;
 }
 
 .container {
     display: block;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 1.4em;
     cursor: pointer;
     font-size: 20px;
-   
 }
 
 .checkmark {
