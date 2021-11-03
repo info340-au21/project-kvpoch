@@ -103,10 +103,12 @@ footer {
     font-family: 'Noto Sans', sans-serif;
     flex-basis: auto;
     padding: 5px;
+    color: #4b2e83;
 }
 
 .flexFilterBy h3 {
     font-size: 1.8em;
+
 }
   
 .flex-container {
