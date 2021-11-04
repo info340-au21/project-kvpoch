@@ -43,19 +43,18 @@ nav a {
 .card-box {
     margin-top: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .card {
-    height: 400px;
+    height: 50%;
     margin: 10px;
     border: solid 3px black;
     border-radius: 10px;
     padding: 7px;
     flex: 0 0 250px;
-
 }
 
 .card a {
@@ -69,6 +68,7 @@ nav a {
 }
 
 .card-content img {
+    display: none;
     height: 20em;
     width: 20em;
     border-radius: 10px;
@@ -170,17 +170,56 @@ footer {
 }
 
 
+@media (min-width: 598px) {
+    .card {
+        height: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        height: 300px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+}
+
 /* LARGE 992px or GREATER */
 @media (min-width: 992px) {
+
     body{ 
         background-color: rgb(250, 250, 250);
     }
+
+    .card-box {
+        flex-direction: row;
+    }
     
+    .card {
+        height: 400px;
+    }
+
+    .card-content img {
+        display: block;
+    }
 }
 /* XLARGE 1200px or GREATER */
 
 @media (min-width: 1200px) {
     body{
         background-color: white;    
+    }
+
+    .card-box {
+        flex-direction: row;
+    }
+
+    .card {
+        height: 450px;
+    }
+    .card-content img {
+        display: block;
     }
 }
