@@ -20,7 +20,9 @@ header h1 {
     padding: 10px;
     color: white;
 }
-
+/*
+CSS for Navigation Bar 
+*/
 nav {
     right:10px;
     padding: 10px;
@@ -39,7 +41,9 @@ nav a {
 .top-nav-content {
     margin-right: 20px;
 }
-
+/*
+Deploys our cards for each library
+*/
 .card-box {
     margin-top: 40px;
     display: flex;
@@ -78,7 +82,9 @@ nav a {
 .card-content p {
     font-size: 1.2em;
 }
-
+/*
+Footer CSS
+*/
 footer {
     font-family: 'Noto Sans', sans-serif;
     position: fixed;
@@ -90,12 +96,18 @@ footer {
     text-align: center;
 }
 
-
+/*
+resizes our images so that they fit on the page
+*/
 .resize {
     width: 80%;
     height: 50%;
 }
 
+
+/*
+allows for our elements to be "flexed" in our webpage
+*/
 .flexMap {
     flex-basis: auto;
     width: 40em;
@@ -229,6 +241,7 @@ footer {
     body{
         background-color: white;    
     }
+<<<<<<< HEAD
 
     .card-box {
         flex-direction: row;
@@ -242,4 +255,72 @@ footer {
         display: block;
         margin: auto;
     }
+=======
+}
+
+/*CSS formmatting for our unique library pages*/
+
+.General-Info{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Noto Sans', sans-serif;
+    color: #4b2e83;
+    height: 400px;
+    margin: 10px;
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 7px;
+    flex: 0 0 250px;
+}
+
+h2 {
+    color: #4b2e83;
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.library-photos{
+    height: 50%;
+    width: 50%;
+}
+
+.card-box {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lib-card {
+    height: 400px;
+    margin: 10px;
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 7px;
+    flex: 0 0 250px;
+}
+
+.lib-card a {
+    text-decoration: none;
+}
+
+.lib-card-content {
+    padding: 5px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.lib-card-content img {
+    height: 20em;
+    width: 20em;
+    border-radius: 10px;
+}
+
+.lib-card-content p {
+    font-size: 1.2em;
+>>>>>>> 6afda9457ac58cfa3ccd771bb7772a85b50daeca
 }
