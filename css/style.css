@@ -20,7 +20,9 @@ header h1 {
     padding: 10px;
     color: white;
 }
-
+/*
+CSS for Navigation Bar 
+*/
 nav {
     right:10px;
     padding: 10px;
@@ -39,7 +41,9 @@ nav a {
 .top-nav-content {
     margin-right: 20px;
 }
-
+/*
+Deploys our cards for each library
+*/
 .card-box {
     margin-top: 40px;
     display: flex;
@@ -78,7 +82,9 @@ nav a {
 .card-content p {
     font-size: 1.2em;
 }
-
+/*
+Footer CSS
+*/
 footer {
     font-family: 'Noto Sans', sans-serif;
     position: fixed;
@@ -90,12 +96,18 @@ footer {
     text-align: center;
 }
 
-
+/*
+resizes our images so that they fit on the page
+*/
 .resize {
     width: 80%;
     height: 50%;
 }
 
+
+/*
+allows for our elements to be "flexed" in our webpage
+*/
 .flexMap {
     flex-basis: auto;
     width: 40em;
@@ -229,8 +241,9 @@ footer {
     body{
         background-color: white;    
     }
-<<<<<<< HEAD
 }
+
+/*CSS formmatting for our unique library pages*/
 
 .General-Info{
     margin-top: 40px;
@@ -274,7 +287,6 @@ h2 {
     border-radius: 10px;
     padding: 7px;
     flex: 0 0 250px;
-
 }
 
 .lib-card a {
@@ -295,19 +307,4 @@ h2 {
 
 .lib-card-content p {
     font-size: 1.2em;
-=======
-
-    .card-box {
-        flex-direction: row;
-    }
-
-    .card {
-        height: 450px;
-        width: 480px;
-    }
-    .card-content img {
-        display: block;
-        margin: auto;
-    }
->>>>>>> a3597da7c3ec45a042c04d1721dfdb3648717ff4
 }
