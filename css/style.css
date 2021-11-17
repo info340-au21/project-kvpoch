@@ -241,21 +241,6 @@ allows for our elements to be "flexed" in our webpage
     body{
         background-color: white;    
     }
-<<<<<<< HEAD
-
-    .card-box {
-        flex-direction: row;
-    }
-
-    .card {
-        height: 450px;
-        width: 480px;
-    }
-    .card-content img {
-        display: block;
-        margin: auto;
-    }
-=======
 }
 
 /*CSS formmatting for our unique library pages*/
@@ -322,5 +307,4 @@ h2 {
 
 .lib-card-content p {
     font-size: 1.2em;
->>>>>>> 6afda9457ac58cfa3ccd771bb7772a85b50daeca
 }
