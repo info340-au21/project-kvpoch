@@ -1,11 +1,8 @@
-
-
+/* 
+Basic styles for the whole page
+*/
 html {
     height: 100%
-}
-
-body {
-    background-color:rgb(209, 209, 209);
 }
 
 header {
@@ -20,6 +17,7 @@ header h1 {
     padding: 10px;
     color: white;
 }
+
 /*
 CSS for Navigation Bar 
 */
@@ -41,20 +39,25 @@ nav a {
 .top-nav-content {
     margin-right: 20px;
 }
+
 /*
 Deploys our cards for each library
+Default styles are for mobile devices
 */
 .card-box {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
 }
 
 .card {
     height: 50%;
-    margin: 10px;
+    width: 55%;
+    margin: 15px;
     border: solid 3px black;
     border-radius: 10px;
     padding: 7px;
@@ -66,22 +69,25 @@ Deploys our cards for each library
 }
 
 .card-content {
-    height: 100px;
+    height: 80%;
+    width: 90%;
+    margin: auto;
     padding: 5px;
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .card-content img {
-    display: none;
-    height: 20em;
-    width: 20em;
+    margin-top: 10px;
+    height: 80%;
+    width: 95%;
     border-radius: 10px;
 }
 
 .card-content p {
     font-size: 1.2em;
 }
+
 /*
 Footer CSS
 */
@@ -91,9 +97,15 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 40px;
+    margin-top: 10px;
     background-color: #4b2e83;
     color: white;
     text-align: center;
+}
+
+.material-icons {
+    font-size: 16px;
 }
 
 /*
@@ -106,7 +118,7 @@ resizes our images so that they fit on the page
 
 
 /*
-allows for our elements to be "flexed" in our webpage
+CSS styles for the Map page
 */
 .flexMap {
     flex-basis: auto;
@@ -151,9 +163,11 @@ allows for our elements to be "flexed" in our webpage
     left: 0;
     height: 25px;
     width: 25px;
-    
 }
 
+/* 
+CSS styles for review page
+*/
 .review-flex-container{
     margin-top: 40px;
     display: flex;
@@ -179,68 +193,6 @@ allows for our elements to be "flexed" in our webpage
 
 .review-comments ol {
     font-size: .8em;
-}
-
-
-@media (min-width: 598px) {
-    .card {
-        height: 50px;
-        width: 220px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-    .card-content {
-        height: 70px;
-        width: 200px;
-        margin-top: 40px;
-    }
-}
-
-@media (min-width: 768px) {
-    .card {
-        height: 100px;
-        width: 330px;
-        margin: auto;
-        margin-bottom: 30px;
-    }
-
-    .card-content {
-        height: 70px;
-        width: 300px;
-        margin-top: 40px;
-    }
-}
-
-/* LARGE 992px or GREATER */
-@media (min-width: 992px) {
-
-    body{ 
-        background-color: rgb(250, 250, 250);
-    }
-
-    .card-box {
-        flex-direction: row;
-    }
-    
-    .card {
-        height: 400px;
-        width: 440px;
-    }
-
-    .card-content img {
-        display: block;
-        height: 260px;
-        width: 290px;
-        margin: auto;
-    }
-}
-
-/* XLARGE 1200px or GREATER */
-@media (min-width: 1200px) {
-    body{
-        background-color: white;    
-    }
 }
 
 /*CSS formmatting for our unique library pages*/
@@ -272,16 +224,9 @@ h2 {
     width: 50%;
 }
 
-.card-box {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .lib-card {
     height: 400px;
+    width: 50%;
     margin: 10px;
     border: solid 3px black;
     border-radius: 10px;
@@ -307,5 +252,72 @@ h2 {
 
 .lib-card-content p {
     font-size: 1.2em;
+}
+
+/* 
+Media queries for different sizes of screen
+*/
+@media (min-width: 768px) {
+    .card {
+        height: 70%;
+        width: 80%;
+        margin: 15px;
+    }
+
+    .card-content {
+        height: 80%;
+        width: 90%;
+        margin: auto;
+        padding: 5px;
+    }
+}
+
+/* LARGE 992px or GREATER */
+@media (min-width: 992px) {
+    .card-box {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .card {
+        margin-left: 60px;
+        height: 70%;
+        width: 70%;
+    }
+
+    .card-content img {
+        height: 90%;
+        width: 90%;
+        padding: 5px;
+    }
+
+    .card-content p {
+        font-size: 0.95em;
+    }
+}
+
+/* XLARGE 1200px or GREATER */
+@media (min-width: 1200px) {
+    .card-box {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        height: 80%;
+        width: 80%;
+    }
+
+    .card-content img {
+        height: 80%;
+        width: 90%;
+        padding: 5px;
+    }
+
+    .card-content p {
+        font-size: 1.5em;
+    }
 }
 
