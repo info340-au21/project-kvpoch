@@ -133,7 +133,7 @@ CSS styles for the Map page
     color: #4b2e83;
 }
 
-.flexFilterBy h3 {
+.flexFilterBy h2 {
     font-size: 1.8em;
 
 }
@@ -187,9 +187,7 @@ CSS styles for review page
     flex: 0 0 500px;
 }
 
-.review-form h3,  .review-comments h3{
-    font-size: 1.5em;
-}
+
 
 .review-comments ol {
     font-size: .8em;
