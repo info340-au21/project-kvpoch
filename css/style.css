@@ -165,9 +165,7 @@ CSS styles for the Map page
     width: 25px;
 }
 
-/* 
-CSS styles for review page
-*/
+/* CSS styles for review page*/
 .review-flex-container{
     margin-top: 40px;
     display: flex;
@@ -186,7 +184,6 @@ CSS styles for review page
     padding: 7px;
     flex: 0 0 500px;
 }
-
 
 
 .review-comments ol {
@@ -255,6 +252,8 @@ h2 {
 /* 
 Media queries for different sizes of screen
 */
+
+/*index.html media queries */
 @media (min-width: 768px) {
     .card {
         height: 70%;
@@ -268,9 +267,24 @@ Media queries for different sizes of screen
         margin: auto;
         padding: 5px;
     }
+
+
+    
+
+     /*review page media queries */
+
+     .review-form,  .review-comments {
+        height: 500px;
+        margin: 10px;
+        border: solid 3px #4b2e83;
+        border-radius: 8px;
+        padding: 7px;
+        flex: 0 0 500px;
+    }
 }
 
 /* LARGE 992px or GREATER */
+/*index.html media queries */
 @media (min-width: 992px) {
     .card-box {
         display: grid;
@@ -292,10 +306,25 @@ Media queries for different sizes of screen
     .card-content p {
         font-size: 0.95em;
     }
+
+    /*review page media queries */
+
+    .review-form,  .review-comments {
+        height: 550px;
+        margin: 10px;
+        border: solid 3px #4b2e83;
+        border-radius:10px;
+        padding: 7px;
+        flex: 0 0 500px;
+    }
+
+
+   
 }
 
 /* XLARGE 1200px or GREATER */
 @media (min-width: 1200px) {
+    /*index.html media queries */
     .card-box {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -317,5 +346,19 @@ Media queries for different sizes of screen
     .card-content p {
         font-size: 1.5em;
     }
+
+    /*review page media queries */
+
+    .review-form,  .review-comments {
+        height: 600px;
+        margin: 5px;
+        border: solid 3px #4b2e83;
+        border-radius: 10px;
+        padding: 7px;
+        flex: 0 0 500px;
+    }
+    
+
+    
 }
 
