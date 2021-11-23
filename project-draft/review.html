@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Christopher Cha, Katherine Poch, Ted Zhong">
+    <meta name="description" content="Draft Project">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./img/libraryicon.png" />
+    <title>UW Library LookUP</title>
+</head>
+
+<body>
+    <header class="welcome">
+        <h1>Welcome to UW Library Directory!</h1>
+        <nav class="top-nav">
+            <div class="top-nav-content">
+                <a href="./index.html">Home</a>
+            </div>
+            <div class="top-nav-content">
+                <a href="./lib_info.html"> Library Info</a>
+            </div>
+            <div class="top-nav-content">
+                <a href="./map.html">Map</a>
+            </div>
+            <div class="top-nav-content">
+                <a href="./review.html">Reviews</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="review-flex-container">
+
+            <div class="review-form">
+                <h2>Review Submission Form</h2>
+                <form>
+                    <label for="library name">Library Name: </label><br>
+                    <input type="text" id="libraryname" name="libraryname"><br>
+
+                    <p>Your Rating: Scale from 1 to 5 Stars (1 = strongly dislike 5 = strongly like)</p>
+                    <input type="radio" id="one" name="one">
+                    <label for="html">1</label><br>
+                    <input type="radio" id="two" name="two">
+                    <label for="css">2</label><br>
+                    <input type="radio" id="three" name="three">
+                    <label for="three">3</label><br>
+                    <input type="radio" id="four" name="four">
+                    <label for="four">4</label><br>
+                    <input type="radio" id="five" name="five">
+                    <label for="five">5</label><br>
+
+                    <p></p>
+                    <label for="Comments">Comments: </label><br>
+                    <input type="text" id="comments" name="comments">
+
+                    <p></p>
+                    <input type="submit" value="Submit" aria-label="Submit Review Form">
+                </form>
+            </div>
+
+            <div class="review-comments">
+                <h2>Top Comments</h2>
+                <h3> Filter By Ratings: </h3>
+                <label">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    1 Star
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 Stars
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 Stars
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 Stars
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 Stars
+                    </label>
+
+                    <h4>5 Star Reviews</h4>
+                    <ol>
+                        <li>Suzzalo is so beautiful and completely silent for studying! It's perfect for finals weeks!
+                        </li>
+                        <li>Ode has a nice coffee vending machine!</li>
+                        <li>It's easy to find a seat at the East Asia Library!</li>
+                    </ol>
+
+                    <h4>1 Star Reviews</h4>
+                    <ol>
+                        <li>There's too many people in Ode! I can never find a seat with a table!</li>
+                        <li>Suzzalo is too silent, it's kind of awkward.</li>
+                        <li>The restrooms at the East Asia Library sucks.</li>
+                    </ol>
+            </div>
+        </div>
+    </main>
+    </main>
+    <footer>
+        <p>
+
+            &copy 2021
+            Contact us:
+            <a href="mailto:zhongz22@uw.edu" style="color:white;"><span class="material-icons">email</span> Zhiwei
+                Zhong</a>
+            <a href="mailto:kvpoch@uw.edu" style="color:white;"><span class="material-icons">email</span> Katherine
+                Poch</a>
+            <a href="mailto:chrisjwc@uw.edu" style="color:white;"><span class="material-icons">email</span> Chris
+                Cha</a>
+        </p>
+    </footer>
+</body>
+
+</html>
