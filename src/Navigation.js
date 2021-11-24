@@ -1,3 +1,5 @@
+import React from 'react';
+
 export  function Navigation () {
     return(
         <header className="welcome">
@@ -5,19 +7,19 @@ export  function Navigation () {
         <h1>Welcome to UW Library Directory!</h1>
         <nav className="top-nav">
             <div className="top-nav-content">
-                <a href="./index.html">Home </a>
+                <a href="./index">Home </a>
             </div>
 
             <div className="top-nav-content">
-                <a href="./lib_info.html"> Library Info</a>
+                <a href="./lib_info"> Library Info</a>
             </div>
 
             <div className="top-nav-content">
-                <a href="./map.html">Map</a>
+                <a href="./map">Map</a>
             </div>
 
             <div className="top-nav-content">
-                <a href="./review.html">Reviews</a>
+                <a href="./review">Reviews</a>
             </div>
 
         </nav>

@@ -1,4 +1,5 @@
 import HOME_PAGE_CARDS from './data/homepage_cards.json';
+import React from 'react';
 
 export function HomePage() {
     // console.log(1);

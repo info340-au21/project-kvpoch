@@ -1,18 +1,22 @@
 
 // import './App.css';
-import {Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {HomePage} from './Homepage';
 import {Footer} from './Footer';
 import {Navigation} from './Navigation';
+import {Map} from './Map';
 function App(props) {
-    let nav = props.nav;
-    return <div>
-      <Navigation />
-        <HomePage />
-        <Footer />
-    </div> 
+    return <BrowserRouter>
+        <div>
+            <Navigation />
+            <Routes>
+                <Route path="/index" element={<HomePage />} />
+                <Route path="/map" element={<Map />} />
+            </ Routes>
+            <Footer />
+        </div> 
+    </BrowserRouter> 
   ;
-    
 }
 
 
