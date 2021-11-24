@@ -4,7 +4,7 @@ export function Map() {
     return(
     <section className="flexMap">
         <div>
-          <img src="..../project-draft/img/librarymap.png" alt="UW Campus Map" class="resize"/>
+          <img src="./img/librarymap.png" alt="UW Campus Map" class="resize"/>
         </div>
       </section>
     )

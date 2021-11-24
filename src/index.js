@@ -5,7 +5,6 @@ import './css/style.css';
 // import reportWebVitals from './reportWebVitals';
 import HOME_PAGE_LIB_CARDS from './data/homepage_cards.json';
 import HEADER_INFO from './data/header.json';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactDOM.render(
   <App home={HOME_PAGE_LIB_CARDS} nav={HEADER_INFO}/>,
