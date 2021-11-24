@@ -1,7 +1,7 @@
 export function Footer() {
     return <footer>
     <p>
-        &copy 2021
+        &copy; 2021
         Contact us:
         <a href="mailto:zhongz22@uw.edu" ><span className="material-icons">email</span> Zhiwei
             Zhong</a>
