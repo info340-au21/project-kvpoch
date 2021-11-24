@@ -125,10 +125,23 @@ resizes our images so that they fit on the page
 CSS styles for the Map page
 */
 .flexMap {
-    flex-basis: auto;
-    width: 40em;
-    height: 60em;
-  }
+    display: flex;
+    align-items: center;
+}
+
+.flexMap img {
+    height: 70%;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flexMapBox {
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 30px;
+}
 
 .flexFilterBy {
     font-family: 'Noto Sans', sans-serif;

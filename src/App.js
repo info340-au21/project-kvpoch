@@ -6,7 +6,7 @@ import {Footer} from './Footer';
 import {Navigation} from './Navigation';
 import {Map} from './Map';
 import {LibInfo} from './LibraryInfo';
-import {ReviewComments} from './Reviews';
+import {Review} from './Reviews';
 function App(props) {
     return <BrowserRouter>
         <div>
@@ -15,7 +15,7 @@ function App(props) {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/lib_info" element={<LibInfo />} />
                 <Route path="/map" element={<Map />} />
-                <Route path="/review" element={<ReviewComments />} />
+                <Route path="/review" element={<Review />} />
             </ Routes>
             <Footer />
         </div> 

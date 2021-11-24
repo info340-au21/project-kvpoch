@@ -1,43 +1,36 @@
 import React from 'react';
+import MAP_FILTER_LABELS from './data/map_filter.json';
 
 export function Map() {
     return(
-    <section className="flexMap">
-        <div>
+      <section className="flexMap">
+        <section className="flexMapBox">
           <img src="./img/librarymap.png" alt="UW Campus Map" class="resize"/>
-        </div>
+        </section>
+        <FilterBox />
       </section>
     )
 }
 
-export function FilterBy() {
+// This function creates a list of filter labels
+function FilterBox() {
+    let filterList = MAP_FILTER_LABELS.map(l => {
+      return <FilterCards label={l.label} key={l.lebel}/>;
+    });
+
     return(
-        <section className="flexFilterBy">
+        <section className="flexFilterBy flexMapBox">
         <h2> FILTER BY </h2>
-        <label className="container"> Cafe/Coffee
-          <input type="checkbox" checked="checked"/>
-          <span className="checkmark"></span>
-        </label>
-
-        <label className="container"> Silent/Low Noise Level
-          <input type="checkbox"/>
-          <span className="checkmark"></span>
-        </label>
-
-        <label className="container"> Medium Noise Level
-          <input type="checkbox"/>
-          <span className="checkmark"></span>
-        </label>
-
-        <label className="container"> Computers
-          <input type="checkbox"/>
-          <span className="checkmark"></span>
-        </label>
-
-        <label className="container"> Outdoor Seating
-          <input type="checkbox"/>
-          <span className="checkmark"></span>
-        </label>
+        {filterList}
       </section>
     )
+}
+
+// This components represents each filter label on the page
+function FilterCards (props) {
+  let label = props.label;
+  return  <label className="container"> {label}
+            <input type="checkbox" checked="checked"/>
+            <span className="checkmark"></span>
+          </label>;
 }

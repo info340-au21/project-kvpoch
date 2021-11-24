@@ -11,12 +11,13 @@ export function HomePage() {
             </div>;
 }
 
+// This function creates a list of library info cards
 function HomePageCard(props) {
     let imgLink = props.img;
     let content = props.labInfo;
     let name = props.name;
     return <div className="card">
-        <a href="./lib_info.html">
+        <a href="/lib_info">
             <div className="card-content">
                 <img src={imgLink} alt={name} />
                 <p className="lib-info">{content}</p>
