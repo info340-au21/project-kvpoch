@@ -6,12 +6,12 @@ export function LibInfo() {
                     Suzzalo Library
                 </h2>
             </div>
-            <div class="lib-card">
+            <div className="lib-card">
                 <div>
-                    <img style="float: left;" src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
                 </div>
-                <div class="lib-card-content">
-                    <div style="float: right;">
+                <div className="lib-card-content">
+                    <div >
                         <p>Suzzalo Library the most famous library at the University of Washington.
                                 Featuring over 350,000 square feet of study space with accessible ramps at the front of the
                                 Red Square entrace.</p>
@@ -20,15 +20,15 @@ export function LibInfo() {
                             <ul>Noise Rating: Mediocre</ul>
                             <ul>Accessibility Rating: High</ul>
                         </ol>
-                            <a href="review.html">Add a Review!</a>
+                            <a href="/review">Add a Review!</a>
                         </div>
                     </div>
                 </div>
-            <div class="lib-card">
-                <div class="lib-card-content">
+            <div className="lib-card">
+                <div className="lib-card-content">
                     <div>
-                        <img style="float: none;" src="img/UW+Suzzallo+Library+Starbucks.jpg"
-                        alt="Tables inside Suzzallo Starbucks" class="library-photos"/>
+                        <img src="img/UW+Suzzallo+Library+Starbucks.jpg"
+                        alt="Tables inside Suzzallo Starbucks" className="library-photos"/>
                     </div>
                     <div>
                         <p>Inside you will find a <a

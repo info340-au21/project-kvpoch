@@ -340,6 +340,19 @@ Media queries for different sizes of screen
         font-size: 1.5em;
     }
 
+    /* libInfo page media queries */
+    .lib-card > div > img {
+        float: left;
+    }
+
+    .lib-card-content > div {
+        float: right;
+    }
+
+    .lib-card-content > div > img {
+        float: none;
+    }
+
     /*review page media queries */
 
     .review-form,  .review-comments {
