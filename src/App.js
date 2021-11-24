@@ -10,7 +10,7 @@ function App(props) {
         <div>
             <Navigation />
             <Routes>
-                <Route path="/index" element={<HomePage />} />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/map" element={<Map />} />
             </ Routes>
             <Footer />
