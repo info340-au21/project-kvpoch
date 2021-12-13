@@ -10,9 +10,9 @@ import {Review} from './Reviews';
 function App(props) {
     return <BrowserRouter>
         <div>
-            <Navigation nav = {props.HEADER_INFO} />
+            <Navigation />
             <Routes>
-                <Route path="/" element={<HomePage cards={props.HOME_PAGE_LIB_CARDS} />} />
+                <Route path="/" element={<HomePage cards={props.home} />} />
                 <Route path="/lib_info" element={<LibInfo />} />
                 <Route path="/filter" element={<Filter />} />
                 <Route path="/review" element={<Review />} />

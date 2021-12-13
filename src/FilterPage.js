@@ -7,7 +7,8 @@ export function Filter() {
         <section className="flexFilterBox">
           <img src="./img/libraryFilter.png" alt="UW Campus Filter" class="resize"/>
         </section>
-        <FilterBox />
+        {/* <FilterBox /> */}
+        <p>test</p>
       </section>
     )
 }

@@ -3,8 +3,8 @@ import React from 'react';
 
 export function HomePage(props) {
     let homePageCards = props.cards;
-    let cardList = homePageCards.Filter(c => {
-        return <HomePageCard img={c.img} labInfo={c.labInfo} name={c.name} key={c.name}/>;
+    let cardList = homePageCards.map(c => {
+        return <HomePageCard img={c.img} labInfo={c.labInfo} name={c.name} key={c.name} />;
     });
 
     return <div className="card-box">
