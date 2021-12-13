@@ -1,0 +1,27 @@
+[
+    {
+        "userName": "Katherine",
+        "library": "Suzzalo",
+        "rating": "5 Stars",
+        "text": "The spiral staircase is so pretty",
+        "timestamp": 1320161040000
+    }, 
+    {
+        "userName": "Joe",
+        "library": "Ode",
+        "rating": "3 Stars",
+        "text": "I can never find a spot",
+        "timestamp": 1320161760000
+    },
+    { "userName": "Kevin",
+        "library": "East Asia Library",
+        "rating": "4 Stars",
+        "text": "It's easy to find a seat at the East Asia Library!",
+        "timestamp": 1320162060000},
+
+    { "userName": "Nick",
+        "library": "Suzzalo",
+        "rating": "3 Stars",
+        "text": "Suzzalo is too silent, it's kind of awkward.",
+        "timestamp": 1320162120000}
+]

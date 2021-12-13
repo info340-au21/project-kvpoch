@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './css/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import reportWebVitals from './reportWebVitals';
 import HOME_PAGE_LIB_CARDS from './data/homepage_cards.json';
 import HEADER_INFO from './data/header.json';

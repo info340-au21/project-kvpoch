@@ -183,29 +183,39 @@ CSS styles for the Map page
 }
 
 /* CSS styles for review page*/
-.review-flex-container{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    font-family: 'Noto Sans', sans-serif;
-    color: #4b2e83;
+
+.comment p:nth-child(1) {
+    font-weight: bold;
 }
 
-.review-form,  .review-comments {
-    height: 450px;
-    margin: 5px;
-    border: solid 3px #4b2e83;
-    border-radius: 10px;
-    padding: 7px;
-    flex: 0 0 500px;
+.comment p:nth-child(2) {
+    font-style: italic;
 }
 
-
-.review-comments ol {
-    font-size: .8em;
+.comment p:nth-child(4) {
+    font-size: .9em;
 }
+
+.comment p {
+    margin-bottom: 0;
+}
+
+.comment {
+    margin-bottom: 1rem;
+}
+
+.material-icons {
+    position: relative;
+    top: 4px;
+  }
+  .like-button {
+    padding: 0;
+  }
+  .like-button .material-icons {
+    position:relative;
+    top:0px;
+  }
+
 
 /*CSS formmatting for our unique library pages*/
 

@@ -1,104 +1,193 @@
 
-import React from 'react';
-import REVIEW_COMMENTS_LABELS from './data/review_comments_label.json'
+//import { Rating } from '@mui/material';
+import React, {useState} from 'react';
+import REVIEW_COMMENTS from './data/comments.json'; 
+//mport MaterialIcon from 'react-google-material-icons'
+//import REVIEW_COMMENTS_LABELS from './data/review_comments_label.json'
 
-export function Review(props) {
+export function Review() {
+    const [reviewArray, setReviewArray] = useState(REVIEW_COMMENTS)
+    const addRating = (ratingValue) => {
+        let rating = ratingValue;
+        return rating; 
+
+    }
+    const addReview = (reviewText, msgUser = "Katherine") => {
+       
+        const newReviewObj = {
+          userName: msgUser,
+          library: "libraryName",
+          rating: addRating(),
+          text: reviewText,
+          timestamp: Date.now() 
+        }
+        const newReviewArray = [...reviewArray, newReviewObj]; 
+        setReviewArray(newReviewArray);
+        console.log(newReviewArray);
+      }
+    
     return (
-        <div>
-            <ReviewComments />
-            <ReviewForm />
+    <div className="container-fluid">
+        
+		<h2 className="mt-2">Real Student Reviews</h2>
+		
+        <div className="row">
+        <div className="col-6 col-lg-4" >
+
+        <RatingForm whatToDoOnSubmit={addRating}/>
+		<ReviewForm whatToDoOnSubmit={addReview}/>
+		</div>
+
+		<div className="col-sm-6 col-lg-8">
+			<CommentPane reviewComments={reviewArray}/>
+            
+		</div>
+
+        
         </div>
+	</div>
         
     );
 }
 
-function ReviewComments() {
-    let labels = REVIEW_COMMENTS_LABELS.map(r => {
-        return (
-            <CommentBox level = {r.level} key = {r.level}/>
-        );
-    });
 
-    let commentsList = REVIEW_COMMENTS_LABELS.map(r => {
-        return (
-            <CommentList level={r.level} content={r.content} key={r.level}/>
-        );
+
+function ReviewForm(props) {
+ 
+
+
+    const [textValue, setTextValue] = useState('');
+    const handleInput = (event) => {
+        setTextValue(event.target.value);
+      }
+
+      const handleSubmit = (event) => {
+        
+        props.whatToDoOnSubmit(textValue);
+        setTextValue(''); //clear old value
+        
+      }
+    return (
+        <div>
+            
+           
+            
+			<div className="form-group">
+				<h3> Enter your Review:</h3>
+				<textarea id="review" className="form-control" style={{resize:"none", height:"100px"}} value={textValue}
+                onChange={handleInput}></textarea>
+                <button className="btn-lg btn-warning mt-2" onClick={handleSubmit}>Submit</button>
+			</div>
+        </div>
+		
+    )
+}
+
+function RatingForm (props) {
+    const[ratingValue, setRating] = useState('');
+    const handleSelect = (event) => {
+        setRating(event.target.value);
+    }
+   
+    return (
+        <div>
+        <h3 className="mt-2">Rating:</h3>
+        
+            
+            <select value= {ratingValue} onChange={handleSelect} className="btn btn-secondary btn-sm dropdown-toggle" >
+                <option value="N/A">Select Rating</option>
+                <option value="5 Stars-Excellent">5 Stars - Excellent</option>
+                <option value="4 Stars-Great">4 Stars - Great</option>
+                <option value="3 Stars-Average">3 Stars - Average</option>
+                <option value="2 Stars-Bad">2 Stars - Bad</option>
+                <option value="1 Star-Horrible">1 Star - Horrible</option>
+                
+            </select>
+            
+                
+                
+                
+        
+    </div>
+    )
+}
+/*
+function LibraryForm () {
+    const handleInput = (event) => {
+        setTextValue(event.target.value);
+      }
+    const [textValue, setTextValue] = useState('');
+    return (
+        <div className="form-group">
+                <h3 className="mt-2">Library: </h3>
+                <input type="text" id="user"className="form-control" placeholder="Type Library Name" 
+                value= {textValue} onChange={handleInput}/>
+            </div>
+    )
+}
+*/
+
+function CommentPane ({reviewComments} ){
+    
+    const componentArray = reviewComments.map((reviewObj) => {
+        const theElem = <Comment comment={reviewObj} key={reviewObj.timestamp} />;
+        return theElem
     });
     return (
-        <div className="review-comments">
-            <h2>Top Comments</h2>
-            <h3> Filter By Ratings: </h3>
-            {labels}
-            {commentsList}
-        </div>
+        <div className="ml-4"> 
+            <h3 className="mt-2">Reviews</h3>
+            {componentArray}
+            </div>
+        
     )
 }
 
 
+function Comment(props) {
+    const [isLiked, setIsLiked] = useState(false);
+    const [isDiskiked, setIsDisliked] = useState(false);
+    const [likeCount, setLikeCount] = useState(0);
+    const [dislikeCount, setDislikeCount] = useState(0);
+    
+    const {userName, rating, text, library} = props.comment;
+    const handleClick = (event) => {
+        setIsLiked(!isLiked);
+        setLikeCount(likeCount + 1);
+        console.log(likeCount);
+      }
+    
+      let thumbColor = "grey";
+      let thumbsUpIcon = "favorite_border";
+      if(isLiked){
+        thumbColor = "green";
+        thumbsUpIcon = "favorite";
+      }
 
-function ReviewForm() {
-    let ratingList = REVIEW_COMMENTS_LABELS.map(r => {
-        return (
-            <ReviewFormInput id={r.ratingID} rating={r.rating} key={r.ratingID}/>
-        );
-    });
-    return (
-        <div class="review-form">
-                <h2>Review Submission Form</h2>
-                <form>
+      const handleAnotherClick = (event) => {
+        setIsDisliked(!isDiskiked);
+        setDislikeCount(dislikeCount + 1);
+    }
+  
+        let thumbDownColor = "grey";
+        let thumbsDownIcon = "favorite_border";
+        if(isDiskiked){
+            thumbDownColor = "red";
+        thumbsDownIcon = "favorite";
+        }
+    return(
+        <div className="comment">
+            <p>{userName}</p>
+            <p> {library}</p>
+            <p> {rating}</p>
+            <p>{text}</p>
+            <button className="btn like-button" onClick={handleClick} >
+            
+          <span className="material-icons" style={{color:thumbColor}}>thumb_up  </span> {likeCount}
+            </button>
 
-                    <label for="library name">Library Name: </label><br/>
-                    <input type="text" id="libraryname" name="libraryname"/><br/>
-
-                    <p>Your Rating: Scale from 1 to 5 Stars (1 = strongly dislike 5 = strongly like)</p>
-                    {ratingList}
-                    <p></p>
-                    <label for="Comments">Comments: </label><br/>
-                    <input type="text" id="comments" name="comments"/>
-
-                    <p></p>
-                    <input type="submit" value="Submit" aria-label="Submit Review Form"/>
-                </form>
-            </div>
-    )  
-}
-
-function CommentBox(props) {
-    let level = props.level;
-    return (
-        <label>
-            <input type="checkbox" checked="checked" />
-            <span className="checkmark"></span>
-            {level}
-        </label>
-    );
-}
-
-function CommentList(props) {
-    let contentLevel = props.level;
-    let contentList = props.content;
-    let contentLi = contentList.map(cl => {
-        return (
-            <li>{cl}</ li>
-        );
-    });
-    return (
-        <div>
-            <h4>{contentLevel} Reviews</h4>
-            <ol>
-                {contentLi}
-            </ol>
+          <button className="btn like-button" onClick={handleAnotherClick} > 
+          <span className="material-icons" style={{color:thumbDownColor}}>thumb_down</span> {dislikeCount}
+        </button>
         </div>
-    );
-}
-
-function ReviewFormInput(props) {
-    let id = props.id;
-    let rating = props.rating;
-    return (
-        <div>
-            <input type="radio" id={id} name={id}/>
-            <label for="html">{rating}</label><br/>
-        </div>
-    );
+    )
 }
