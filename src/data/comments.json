@@ -1,14 +1,14 @@
 [
     {
         "userName": "Katherine",
-        "library": "Suzzalo",
+        "library": "Suzzalo Library",
         "rating": "5 Stars",
         "text": "The spiral staircase is so pretty",
         "timestamp": 1320161040000
     }, 
     {
         "userName": "Joe",
-        "library": "Ode",
+        "library": "Odegaard Undergraduate Library",
         "rating": "3 Stars",
         "text": "I can never find a spot",
         "timestamp": 1320161760000
@@ -20,7 +20,7 @@
         "timestamp": 1320162060000},
 
     { "userName": "Nick",
-        "library": "Suzzalo",
+        "library": "Suzzalo Library",
         "rating": "3 Stars",
         "text": "Suzzalo is too silent, it's kind of awkward.",
         "timestamp": 1320162120000}
