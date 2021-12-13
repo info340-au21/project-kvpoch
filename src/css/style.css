@@ -190,6 +190,10 @@ CSS styles for the Map page
 
 .comment p:nth-child(2) {
     font-style: italic;
+    
+}
+.comment p:nth-child(3) {
+    color: purple;
 }
 
 .comment p:nth-child(4) {

@@ -1,5 +1,7 @@
 
-//import { Rating } from '@mui/material';
+
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React, {useState} from 'react';
 import REVIEW_COMMENTS from './data/comments.json'; 
 //mport MaterialIcon from 'react-google-material-icons'
@@ -151,9 +153,9 @@ function Comment(props) {
     
     const {userName, rating, text, library} = props.comment;
     const handleClick = (event) => {
-        setIsLiked(!isLiked);
+        setIsLiked(true);
         setLikeCount(likeCount + 1);
-        console.log(likeCount);
+        
       }
     
       let thumbColor = "grey";
@@ -164,7 +166,7 @@ function Comment(props) {
       }
 
       const handleAnotherClick = (event) => {
-        setIsDisliked(!isDiskiked);
+        setIsDisliked(true);
         setDislikeCount(dislikeCount + 1);
     }
   
@@ -177,8 +179,9 @@ function Comment(props) {
     return(
         <div className="comment">
             <p>{userName}</p>
-            <p> {library}</p>
-            <p> {rating}</p>
+            
+            <p> <span className="material-icons">book </span> {library}</p>
+            <p> <span className="material-icons" >star </span> {rating} <span className="material-icons" >star </span> </p>
             <p>{text}</p>
             <button className="btn like-button" onClick={handleClick} >
             
