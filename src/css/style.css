@@ -38,6 +38,10 @@ nav a {
 
 .top-nav-content {
     margin-right: 20px;
+
+}
+.top-nav-content:hover {
+    color:goldenrod;
 }
 
 /*

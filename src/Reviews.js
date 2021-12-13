@@ -10,7 +10,7 @@ import REVIEW_COMMENTS from './data/comments.json';
 export function Review() {
     
     const [reviewArray, setReviewArray] = useState(REVIEW_COMMENTS);
-    const[ratingValue, setRating] = useState('');
+    const [ratingValue, setRating] = useState('');
     const [userValue, setUserValue] = useState('');
     const [libraryValue, setLibraryValue] = useState('');
     
@@ -25,17 +25,13 @@ export function Review() {
     const userFunction = (userValue) => {
         if(userValue) {
             setUserValue(userValue);
-        } else {
-            setUserValue("Anonymous");
-        }
+        } 
     }
 
     const libraryFunction = (libraryValue) => {
         if(libraryValue) {
             setLibraryValue(libraryValue);
-        } else {
-            setLibraryValue("General");
-        }
+        } 
     }
 
     const addReview = (reviewText, ratingValue, userValue, libraryValue) => {
