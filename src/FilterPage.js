@@ -14,7 +14,7 @@ export function Filter() {
 
 // This function creates a list of filter labels
 function FilterBox() {
-    let filterList = Filter_LABELS.Filter(l => {
+    let filterList = Filter_LABELS.filter(l => {
       return <FilterCards label={l.label} key={l.lebel}/>;
     });
 
@@ -33,6 +33,14 @@ function FilterCards (props) {
             <input type="checkbox" checked="checked"/>
             <span className="checkmark"></span>
           </label>;
+}
+
+function FilterCardBox() {
+  return (
+    <div className='cardBox'>
+
+    </div>
+  );
 }
 
 // This function creates a list of library info cards
