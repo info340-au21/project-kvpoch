@@ -140,10 +140,13 @@ CSS styles for the Filter page
 .flexFilterBox {
     flex-direction: row;
     padding: 5px;
-    margin-top: 30px;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
 .flexFilterBy {
+    margin-top: 10%;
+    margin-left: 15%;
     font-family: 'Noto Sans', sans-serif;
     flex-basis: auto;
     padding: 5px;

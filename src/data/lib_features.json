@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Odegaard",
+        "feature": [
+            {
+                "cafe": false,
+                "noise": "medium",
+                "computers": true,
+                "outdoor": true
+            }
+        ]
+    },
+    {
+        "name": "Suzzallo",
+        "feature": [
+            {
+                "cafe": true,
+                "noise": "low",
+                "computers": true,
+                "outdoor": false
+            }
+        ]
+    },
+    {
+        "name": "Allen",
+        "feature": [
+            {
+                "cafe": false,
+                "noise": "low",
+                "computers": true,
+                "outdoor": false
+            }
+        ]
+    },
+    {
+        "name": "Engineering",
+        "feature": [
+            {
+                "cafe": false,
+                "noise": "low",
+                "computers": true,
+                "outdoor": false
+            }
+        ]
+    },
+    {
+        "name": "East Asia",
+        "feature": [
+            {
+                "cafe": false,
+                "noise": "low",
+                "computers": false,
+                "outdoor": false
+            }
+        ]
+    }
+]
