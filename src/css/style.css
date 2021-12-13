@@ -40,10 +40,10 @@ nav a {
     margin-right: 20px;
 
 }
-.top-nav-content:hover {
-    color:goldenrod;
-}
 
+.top-nav-content:hover {
+    color:gold;
+}
 /*
 Deploys our cards for each library
 Default styles are for mobile devices
@@ -230,7 +230,14 @@ CSS styles for the Filter page
     top:0px;
   }
 
-  
+  .reviewFilter{
+      font-size: 1.2em;
+      color:gray;
+  }
+
+  .filterButtons:hover {
+    color: purple;
+  }
 
 /*CSS formmatting for our unique library pages*/
 

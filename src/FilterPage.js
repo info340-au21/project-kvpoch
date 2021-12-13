@@ -45,7 +45,7 @@ function FilterCard(props) {
 // This function creates a list of filter labels
 function FilterBox(props) {
     let filterList = FILTER_LABELS.map(l => {
-      return <Filters label={l.label} key={l.lebel}/>;
+      return <Filters label={l.label} key={l.label}/>;
     });
 
     return(

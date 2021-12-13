@@ -2,8 +2,10 @@
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import React, {useState} from 'react';
-import REVIEW_COMMENTS from './data/comments.json'; 
+import React, {useState, useEffect} from 'react';
+import REVIEW_COMMENTS from './data/comments.json';
+import buttons from './data/buttons.json';
+import { getByPlaceholderText } from '@testing-library/react';
 //mport MaterialIcon from 'react-google-material-icons'
 //import REVIEW_COMMENTS_LABELS from './data/review_comments_label.json'
 
@@ -150,7 +152,7 @@ function LibraryForm (props) {
                 <option value="N/A">Select Library</option>
                 <option value="Art Library">Art Library</option>
                 <option value="Built Environment Library">Built Environment Library</option>
-                <option value="Drama Library">Drama Library</option>
+                <option value="Allen Library">Allen Library</option>
                 <option value="East Asia Library">East Asia Library</option>
                 <option value="Engineering Libraryr">Engineering Library</option>
                 <option value="Foster Business Library">Foster Business Library</option>
@@ -180,18 +182,57 @@ function UserForm (props) {
 
 
 function CommentPane ({reviewComments} ){
+    const[filteredArray, setFiltered] = useState(null);
+    const[buttonClicked, setButtonClicked] = useState(false);
     
-    const componentArray = reviewComments.map((reviewObj) => {
-        const theElem = <Comment comment={reviewObj} key={reviewObj.timestamp} />;
-        return theElem
-    });
+    useEffect(() => {
+        setFiltered(reviewComments);
+      }, []);
+
+    
+
+    function handleButton(event) {
+        let typeRating = event.target.value;
+        
+        typeRating !== "all"
+            ?setFiltered(filterRating(typeRating))
+            :setFiltered(reviewComments);
+
+       
+    }
+    
+    function filterRating(ratingType) {
+        let filteredRatings = reviewComments.filter((type) => { 
+            if(type.rating === ratingType) {
+            return true
+        } }
+        
+        )
+      
+        return filteredRatings
+    }
+    
     return (
         <div className="ml-4"> 
             <h3 className="mt-2">Reviews</h3>
-            {componentArray}
+            <h4 className="reviewFilter">Filter By Rating:</h4>
+           
+            {buttons &&
+             buttons.map((type, index) => (
+          
+                <button className="filterButtons" key={index} value={type.value} onClick={handleButton} >
+                    {type.name}
+                </button> ))}
+            <p></p>
+            {filteredArray && filteredArray.map((reviewObj) => {
+                const theElem = <Comment comment={reviewObj} key={reviewObj.timestamp} />;
+                return theElem }) }
+            
             </div>
         
     )
+    
+    
 }
 
 
@@ -213,14 +254,11 @@ function Comment(props) {
         thumbColor = "green";
         
       }
-
       const handleAnotherClick = (event) => {
         setIsDisliked(true);
         setDislikeCount(dislikeCount + 1);
     }
-  
         let thumbDownColor = "grey";
-        
         if(isDiskiked){
             thumbDownColor = "red";
         
