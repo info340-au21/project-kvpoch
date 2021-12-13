@@ -122,14 +122,14 @@ resizes our images so that they fit on the page
 
 
 /*
-CSS styles for the Map page
+CSS styles for the Filter page
 */
-.flexMap {
+.flexFilter {
     display: flex;
     align-items: center;
 }
 
-.flexMap img {
+.flexFilter img {
     height: 70%;
     width: 70%;
     display: block;
@@ -137,7 +137,7 @@ CSS styles for the Map page
     margin-right: auto;
 }
 
-.flexMapBox {
+.flexFilterBox {
     flex-direction: row;
     padding: 5px;
     margin-top: 30px;

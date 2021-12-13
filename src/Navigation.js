@@ -15,7 +15,7 @@ export  function Navigation () {
             </div>
 
             <div className="top-nav-content">
-                <a href="/map">Map</a>
+                <a href="/filter">Filter</a>
             </div>
 
             <div className="top-nav-content">

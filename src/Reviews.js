@@ -131,7 +131,7 @@ function LibraryForm () {
 
 function CommentPane ({reviewComments} ){
     
-    const componentArray = reviewComments.map((reviewObj) => {
+    const componentArray = reviewComments.Filter((reviewObj) => {
         const theElem = <Comment comment={reviewObj} key={reviewObj.timestamp} />;
         return theElem
     });

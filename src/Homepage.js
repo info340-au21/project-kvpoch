@@ -2,7 +2,7 @@ import HOME_PAGE_CARDS from './data/homepage_cards.json';
 import React from 'react';
 
 export function HomePage() {
-    let cardList = HOME_PAGE_CARDS.map(c => {
+    let cardList = HOME_PAGE_CARDS.Filter(c => {
         return <HomePageCard img={c.img} labInfo={c.labInfo} name={c.name} key={c.name}/>;
     });
 

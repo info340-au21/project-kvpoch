@@ -10,9 +10,9 @@
         "compName": "LibInfo"
     },
     {
-        "label": "Map", 
-        "link": "./map",
-        "compName": "MapPage"
+        "label": "Filter", 
+        "link": "./Filter",
+        "compName": "FilterPage"
     },
     {
         "label": "Reviews", 

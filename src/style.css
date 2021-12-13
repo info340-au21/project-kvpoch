@@ -118,9 +118,9 @@ resizes our images so that they fit on the page
 
 
 /*
-CSS styles for the Map page
+CSS styles for the Filter page
 */
-.flexMap {
+.flexFilter {
     flex-basis: auto;
     width: 40em;
     height: 60em;
