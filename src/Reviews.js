@@ -2,7 +2,7 @@
 //import { FontAwesomeIcon } from 'react-fontawesome';
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import REVIEW_COMMENTS from './data/comments.json';
 import buttons from './data/buttons.json';
 
