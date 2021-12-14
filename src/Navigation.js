@@ -21,7 +21,7 @@ export  function Navigation () {
                                 <a href="/BuiltEnvirPage">Built Environment</a>
                                 <a href="/EastAsiaPage">East Asia Library</a>
                                 <a href="/EngineeringPage">Engineering Library</a>
-                                <a href="/FosterBuisnessPage">Foster Buisness Library</a>
+                                <a href="/FosterBuisnessPage">Foster Business Library</a>
                                 <a href="/SuzzaloPage">Suzzalo Library</a>
                                 <a href="/OdegaardUnderPage">Odegaard Undergraduate Library</a>
                             </div>
