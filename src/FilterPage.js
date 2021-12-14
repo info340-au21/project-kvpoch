@@ -104,7 +104,7 @@ function FilterCardBox(props) {
   if (filterResult.length === 0) {
     return (
       <div className='cardBox'>
-        <p>Sorry, there is no result matching for your selected checkedState.</p>
+        <p>Sorry, there is no result matching to the current features.</p>
       </div>
     );
   } else {
