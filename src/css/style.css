@@ -38,6 +38,12 @@ nav a {
 
 .top-nav-content {
     margin-right: 20px;
+
+}
+
+.top-nav-content a:hover{
+    color: goldenrod;
+
 }
 
 /*
@@ -122,15 +128,31 @@ resizes our images so that they fit on the page
 
 
 /*
-CSS styles for the Map page
+CSS styles for the Filter page
 */
-.flexMap {
-    flex-basis: auto;
-    width: 40em;
-    height: 60em;
-  }
+.flexFilter {
+    display: flex;
+    align-items: center;
+}
+
+.flexFilter img {
+    height: 70%;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flexFilterBox {
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
 
 .flexFilterBy {
+    margin-top: 10%;
+    margin-left: 15%;
     font-family: 'Noto Sans', sans-serif;
     flex-basis: auto;
     padding: 5px;
@@ -170,29 +192,54 @@ CSS styles for the Map page
 }
 
 /* CSS styles for review page*/
-.review-flex-container{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    font-family: 'Noto Sans', sans-serif;
-    color: #4b2e83;
+
+.comment p:nth-child(1) {
+    font-weight: bold;
 }
 
-.review-form,  .review-comments {
-    height: 450px;
-    margin: 5px;
-    border: solid 3px #4b2e83;
-    border-radius: 10px;
-    padding: 7px;
-    flex: 0 0 500px;
+.comment p:nth-child(2) {
+    font-style: italic;
+    color:goldenrod;
+    
+}
+.comment p:nth-child(3) {
+    color: purple;
 }
 
-
-.review-comments ol {
+.comment p:nth-child(5) {
     font-size: .8em;
+    margin-top: .5rem;
+    color: gray;
 }
+
+.comment p {
+    margin-bottom: 0;
+}
+
+.comment {
+    margin-bottom: 1rem;
+}
+
+.material-icons {
+    position: relative;
+    top: 4px;
+  }
+  .like-button {
+    padding: 0;
+  }
+  .like-button .material-icons {
+    position:relative;
+    top:0px;
+  }
+
+  .reviewFilter{
+      font-size: 1.2em;
+      color:gray;
+  }
+
+  .filterButtons:hover {
+    color: purple;
+  }
 
 /*CSS formmatting for our unique library pages*/
 
@@ -264,16 +311,7 @@ Media queries for different sizes of screen
 
     
 
-     /*review page media queries */
-
-     .review-form,  .review-comments {
-        height: 500px;
-        margin: 10px;
-        border: solid 3px #4b2e83;
-        border-radius: 8px;
-        padding: 7px;
-        flex: 0 0 500px;
-    }
+     
 }
 
 /* LARGE 992px or GREATER */
@@ -300,16 +338,7 @@ Media queries for different sizes of screen
         font-size: 0.95em;
     }
 
-    /*review page media queries */
-
-    .review-form,  .review-comments {
-        height: 550px;
-        margin: 10px;
-        border: solid 3px #4b2e83;
-        border-radius:10px;
-        padding: 7px;
-        flex: 0 0 500px;
-    }
+   
 
 
    
@@ -340,16 +369,20 @@ Media queries for different sizes of screen
         font-size: 1.5em;
     }
 
-    /*review page media queries */
-
-    .review-form,  .review-comments {
-        height: 600px;
-        margin: 5px;
-        border: solid 3px #4b2e83;
-        border-radius: 10px;
-        padding: 7px;
-        flex: 0 0 500px;
+    /* libInfo page media queries */
+    .lib-card > div > img {
+        float: left;
     }
+
+    .lib-card-content > div {
+        float: right;
+    }
+
+    .lib-card-content > div > img {
+        float: none;
+    }
+
+   
     
 
     

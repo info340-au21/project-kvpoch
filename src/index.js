@@ -2,16 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './css/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import reportWebVitals from './reportWebVitals';
 import HOME_PAGE_LIB_CARDS from './data/homepage_cards.json';
 import HEADER_INFO from './data/header.json';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactDOM.render(
-  <Router>
-    <App home={HOME_PAGE_LIB_CARDS} nav={HEADER_INFO}/>
-  </Router>,
-   document.getElementById('root')
+    <App home={HOME_PAGE_LIB_CARDS}/>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
