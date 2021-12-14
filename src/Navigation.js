@@ -11,11 +11,11 @@ export  function Navigation () {
                     </div>
 
                     <div className="top-nav-content">
-                        <div class="dropdown">
-                            <button class="dropbtn">Library Info
-                                <i class="fa fa-caret-down"></i>
+                        <div className="dropdown">
+                            <button className="dropbtn">Library Info
+                                <i className="fa fa-caret-down"></i>
                             </button>
-                            <div class="dropdown-content">
+                            <div className="dropdown-content">
                                 <a href="/ArtsPage">Art Library</a>
                                 <a href="/AllenPage">Allen Library</a>
                                 <a href="/BuiltEnvirPage">Built Environment</a>
