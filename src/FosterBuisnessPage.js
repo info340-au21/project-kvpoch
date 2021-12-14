@@ -5,7 +5,7 @@ export function Foster() {
         <div>
             <div>
                 <h2>
-                    Foster Buisness Library
+                    Foster Business Library
                 </h2>
             </div>
             <div className="lib-card">
@@ -15,7 +15,7 @@ export function Foster() {
                 <div className="lib-card-content">
                     <div >
                         <p>
-                            Foster Library is located on the first floor of Paccar Hall!
+                            Foster Business Library is located on the first floor of Paccar Hall!
                             Featuring over 400 study seats that all have access to power and over 60 thousand buisness books
                             you will definitly not get bored in this library!
                             The library also features an astonishing 800 square foot skylight!
