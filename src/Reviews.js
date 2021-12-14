@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import buttons from './data/buttons.json';
 
 export function Review() {
-    const [reviewComments, setReviewComments] = useState('');
-    const [reviewArray, setReviewArray] = useState(reviewComments);
+    const [reviewArray, setReviewArray] = useState('');
     const [ratingValue, setRating] = useState('');
     const [userValue, setUserValue] = useState('');
     const [libraryValue, setLibraryValue] = useState('');
@@ -15,7 +14,7 @@ export function Review() {
             return response.json();
         })
         .then(function(json) {
-            setReviewComments(json);
+            setReviewArray(json);
         })
         .catch(function(err) {
             console.log('parsing failed', err);
@@ -52,12 +51,8 @@ export function Review() {
         }
         const newReviewArray = [newReviewObj,...reviewArray];
         setReviewArray(newReviewArray);
-
-        
     }
-
-
-    
+    console.log(reviewArray);
     return (
         <div className="container-fluid">
 
@@ -189,6 +184,7 @@ function UserForm(props) {
 
 
 function CommentPane({ reviewComments }) {
+    // console.log(reviewComments);
     const [filteredArray, setFiltered] = useState(null);
     
 
@@ -203,6 +199,7 @@ function CommentPane({ reviewComments }) {
     }
 
     function filterRating(ratingType) {
+        console.log(reviewComments);
         let filteredRatings = reviewComments.filter((type) => {
             if (type.rating === ratingType) {
                 return true
