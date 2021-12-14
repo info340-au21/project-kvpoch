@@ -1,30 +1,31 @@
 
-//import { FontAwesomeIcon } from 'react-fontawesome';
-
-
 import React, { useState, useEffect } from 'react';
-import REVIEW_COMMENTS from './data/comments.json';
 import buttons from './data/buttons.json';
 
-//mport MaterialIcon from 'react-google-material-icons'
-//import REVIEW_COMMENTS_LABELS from './data/review_comments_label.json'
-
 export function Review() {
-
-    const [reviewArray, setReviewArray] = useState(REVIEW_COMMENTS);
+    const [reviewComments, setReviewComments] = useState('');
+    const [reviewArray, setReviewArray] = useState(reviewComments);
     const [ratingValue, setRating] = useState('');
     const [userValue, setUserValue] = useState('');
     const [libraryValue, setLibraryValue] = useState('');
-    
 
-
+    useEffect(() => {
+        fetch('data/comments.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            setReviewComments(json);
+        })
+        .catch(function(err) {
+            console.log('parsing failed', err);
+        });
+    }, []);
 
     const ratingFunction = (ratingValue) => {
         if (ratingValue) {
             setRating(ratingValue);
-
         }
-        
     }
 
     const userFunction = (userValue) => {
@@ -99,9 +100,6 @@ function ReviewForm(props) {
         props.setUserOnSubmit('');
         props.setLibraryOnSubmit('');
         props.setRatingOnSubmit('');
-
-
-
     }
     return (
         <div>

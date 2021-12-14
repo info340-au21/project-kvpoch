@@ -5,21 +5,19 @@ import {Navigation} from './Navigation';
 import {Filter} from './FilterPage';
 import {LibInfo} from './LibraryInfo';
 import {Review} from './Reviews';
-import { useEffect, useState } from 'react';
-import HOME_PAGE_LIB_CARDS from './data/homepage_cards.json';
-import HEADER_INFO from './data/header.json';
+import { useState } from 'react';
 
 function App() {
     const [homepageLibCards, setHomepageLibCards] = useState(null);
-    fetch('./data/homepage_cards.json')
+    fetch('data/homepage_cards.json')
         .then(function(response) {
             return response.json();
         })
         .then(function(json) {
             setHomepageLibCards(json);
-            console.log('parsed json', json);
         })
         .catch(function(err) {
+            // alert('parsing failed');
             console.log('parsing failed', err);
         });
 

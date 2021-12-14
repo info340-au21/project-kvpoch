@@ -1,15 +1,17 @@
-import HOME_PAGE_CARDS from './data/homepage_cards.json';
 import React from 'react';
 
 export function HomePage(props) {
     let homePageCards = props.cards;
-    let cardList = homePageCards.map(c => {
-        return <HomePageCard img={c.img} labInfo={c.labInfo} name={c.name} key={c.name} />;
-    });
-
-    return <div className="card-box">
-                {cardList}
-            </div>;
+    if (homePageCards != null) {
+        let cardList = homePageCards.map(c => {
+            return <HomePageCard img={c.img} labInfo={c.labInfo} name={c.name} key={c.name} />;
+        });
+        return <div className="card-box">
+            {cardList}
+        </div>;
+    } else {
+        return <p>Loading Data</p>
+    }
 }
 
 // This function creates a list of library info cards

@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import FILTER_LABELS from './data/filter.json';
-import LIB_FEATURES from './data/lib_features.json';
 import { useEffect } from 'react';
 
 
@@ -10,21 +8,49 @@ export function Filter() {
     new Array(0).fill("")
   );
   const [filterCheckedArray, setFilterCheckedArray] = useState(
-    new Array(FILTER_LABELS.length).fill(false)
+    new Array(5).fill(false)
   );
 
-  useEffect(() => {
-    // console.log(filterCheckedArray);
-    handleFilterBox(filterCheckedArray, setFilterResult, LIB_FEATURES);
-  }, [filterCheckedArray]);
+  const [filterLabels, setFilterLabels] = useState(null);
 
-  // console.log(FilterCheckedArray);
+  const [libFeatures, setLibFeatures] = useState(null);
+
+  useEffect(() => {
+    fetch('data/filter.json')
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(json) {
+          setFilterLabels(json);
+      })
+      .catch(function(err) {
+          console.log('parsing failed', err);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('data/lib_features.json')
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(json) {
+        setLibFeatures(json);
+      })
+      .catch(function(err) {
+          console.log('parsing failed', err);
+      });
+  }, []);
+
+  useEffect(() => {
+    handleFilterBox(filterCheckedArray, setFilterResult, libFeatures);
+  }, [filterCheckedArray, libFeatures]);
+
     return(
       <section className="flexFilter">
         <section className="flexFilterBox">
           <FilterCardBox result={filterResult} />
         </section>
-        <FilterBox labels={FILTER_LABELS} checkedState={filterCheckedArray} func={setFilterCheckedArray}/>
+        <FilterBox labels={filterLabels} checkedState={filterCheckedArray} func={setFilterCheckedArray}/>
       </section>
     )
 }
@@ -42,29 +68,32 @@ function handleOnChange(checkedState, arrayId, func) {
 }
 
 function handleFilterBox(currCheckedState, setCurrFilterResult, libFeatures) {
-    let newFilterResult = libFeatures.map((lib, libId) => {
-      let libName = lib.name;
-      // console.log(libNames);
-      let libFeat = lib.feature[0];
-      let libKeys = Object.keys(libFeat);
-      let filterFlag = false;
-      let comparisonResult = libKeys.map((name, ftId) => {
-        // console.log("current ID: " + ftId + " lib name: " + name);
-        if (currCheckedState[ftId] === true && libFeat[name] === true) {
-          filterFlag = true;
-          return (libName); 
+    let newFilterResult = [""];
+    if (libFeatures != null) {
+      newFilterResult = libFeatures.map((lib, libId) => {
+        let libName = lib.name;
+        // console.log(libNames);
+        let libFeat = lib.feature[0];
+        let libKeys = Object.keys(libFeat);
+        let filterFlag = false;
+        let comparisonResult = libKeys.map((name, ftId) => {
+          // console.log("current ID: " + ftId + " lib name: " + name);
+          if (currCheckedState[ftId] === true && libFeat[name] === true) {
+            filterFlag = true;
+            return (libName); 
+          }
+          return "";
+        });
+        // console.log("current lib name : " + libName + " should show: " + filterFlag);
+        if (filterFlag) {
+          return libName;
+        } else {
+          return "";
         }
-        return "";
       });
-      // console.log("current lib name : " + libName + " should show: " + filterFlag);
-      if (filterFlag) {
-        return libName;
-      } else {
-        return "";
-      }
-    });
+    } 
     let finalResult = newFilterResult.filter((item) => {
-      return item != "";
+      return item !== "";
     });
     setCurrFilterResult(finalResult);
 }
@@ -96,7 +125,6 @@ function FilterCardBox(props) {
 
 // This function creates a list of library info cards
 function FilterCard(props) {
-  console.log(props.text);
   return <div className="card">
     <div className="card-content">
         <p className="lib-info">{props.text}</p>
@@ -108,11 +136,13 @@ function FilterCard(props) {
 function FilterBox(props) {
     let labels = props.labels;
     let checkedState = props.checkedState;
-    let func = props.func
-    let filterList = labels.map((l, idx) => {
-      return <Filters label={l.label} key={l.label} id={idx} checkedState={checkedState} func={func}/>;
-    });
-
+    let func = props.func;
+    let filterList = [];
+    if (labels != null) {
+      filterList = labels.map((l, idx) => {
+        return <Filters label={l.label} key={l.label} id={idx} checkedState={checkedState} func={func}/>;
+      });
+    }
     return(
         <section className="flexFilterBy">
         <h2> FILTER BY </h2>
