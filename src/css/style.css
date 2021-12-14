@@ -355,8 +355,8 @@ Media queries for different sizes of screen
     .card {
         margin-left: auto;
         margin-right: auto;
-        height: 80%;
-        width: 80%;
+        height: 90%;
+        width: 90%;
     }
 
     .card-content img {

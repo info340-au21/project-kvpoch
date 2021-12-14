@@ -15,8 +15,8 @@ export function Filter() {
 
   useEffect(() => {
     // console.log(filterCheckedArray);
-    handleFilterBox(filterCheckedArray, filterResult, setFilterResult, LIB_FEATURES);
-  }, [filterCheckedArray, filterResult]);
+    handleFilterBox(filterCheckedArray, setFilterResult, LIB_FEATURES);
+  }, [filterCheckedArray]);
 
   // console.log(FilterCheckedArray);
     return(
@@ -41,48 +41,65 @@ function handleOnChange(checkedState, arrayId, func) {
   func(newCheckedState);
 }
 
-function handleFilterBox(currCheckedState, currFilterResult, setCurrFilterResult, libFeatures) {
+function handleFilterBox(currCheckedState, setCurrFilterResult, libFeatures) {
     let newFilterResult = libFeatures.map((lib, libId) => {
       let libName = lib.name;
       // console.log(libNames);
       let libFeat = lib.feature[0];
       let libKeys = Object.keys(libFeat);
+      let filterFlag = false;
       let comparisonResult = libKeys.map((name, ftId) => {
         // console.log("current ID: " + ftId + " lib name: " + name);
         if (currCheckedState[ftId] === true && libFeat[name] === true) {
+          filterFlag = true;
           return (libName); 
         }
         return "";
       });
-      console.log(comparisonResult);
-        
+      // console.log("current lib name : " + libName + " should show: " + filterFlag);
+      if (filterFlag) {
+        return libName;
+      } else {
+        return "";
+      }
     });
-    // console.log(newFilterResult);
+    let finalResult = newFilterResult.filter((item) => {
+      return item != "";
+    });
+    setCurrFilterResult(finalResult);
 }
 
 // This component is to show the filtered library card
 function FilterCardBox(props) {
   let filterResult = props.result;
-  // let func = props.func;
   if (filterResult.length === 0) {
     return (
       <div className='cardBox'>
         <p>Sorry, there is no result matching for your selected checkedState.</p>
       </div>
     );
+  } else {
+    // console.log(filterResult);
+    let cardList = filterResult.map((r) => {
+      // console.log(r);
+      return (
+        <FilterCard text={r} key={r}/>
+      );
+    });
+    return (
+      <div className='cardBox'>
+        {cardList}
+      </div>
+    );
   }
-  return (
-    <div className='cardBox'>
-      {/* <FilterBox func={func} /> */}
-    </div>
-  );
 }
 
 // This function creates a list of library info cards
 function FilterCard(props) {
+  console.log(props.text);
   return <div className="card">
     <div className="card-content">
-        <p className="lib-info"></p>
+        <p className="lib-info">{props.text}</p>
     </div>
   </div>;
 }
