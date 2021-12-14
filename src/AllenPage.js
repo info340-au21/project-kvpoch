@@ -4,7 +4,7 @@ export function Allen() {
     return (
         <div>
             <div>
-                <h2>
+                <h2 className= "mt-4">
                     Allen Library
                 </h2>
             </div>

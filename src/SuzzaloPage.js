@@ -4,7 +4,7 @@ export function Suzzalo() {
     return (
         <div>
             <div>
-                <h2>
+                <h2 className= "mt-4">
                     Suzzalo Library
                 </h2>
             </div>

@@ -4,7 +4,7 @@ export function Odegaard() {
     return (
         <div>
             <div>
-                <h2>
+                <h2 className= "mt-4">
                     Odegaard Undergraduate Library
                 </h2>
             </div>

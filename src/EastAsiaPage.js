@@ -4,7 +4,7 @@ export function EastAsia() {
     return (
         <div>
             <div>
-                <h2>
+                <h2 className= "mt-4">
                     Tateuchi East Asia Library
                 </h2>
             </div>

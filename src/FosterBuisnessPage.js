@@ -4,7 +4,7 @@ export function Foster() {
     return (
         <div>
             <div>
-                <h2>
+                <h2 className= "mt-4">
                     Foster Business Library
                 </h2>
             </div>

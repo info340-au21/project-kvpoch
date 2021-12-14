@@ -145,7 +145,7 @@ function FilterBox(props) {
     }
     return(
         <section className="flexFilterBy">
-        <h2> FILTER BY </h2>
+        <h2 className="mb-4 bg-warning"> FILTER BY </h2>
         {filterList}
       </section>
     )

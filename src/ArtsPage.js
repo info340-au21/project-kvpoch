@@ -4,7 +4,7 @@ export function Arts() {
     return (
         <div>
             <div>
-                <h2>
+                <h2 className= "mt-4">
                     Arts Library
                 </h2>
             </div>
