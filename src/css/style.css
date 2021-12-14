@@ -41,9 +41,11 @@ nav a {
 
 }
 
-.top-nav-content:hover {
-    color:gold;
+.top-nav-content a:hover{
+    color: goldenrod;
+
 }
+
 /*
 Deploys our cards for each library
 Default styles are for mobile devices
