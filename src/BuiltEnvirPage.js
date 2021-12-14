@@ -5,18 +5,20 @@ export function BuiltEnvironment() {
         <div>
             <div>
                 <h2>
-                    Suzzalo Library
+                   Built Environment Library
                 </h2>
             </div>
             <div className="lib-card">
                 <div>
-                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/Built Environments Library.jpeg" alt="Help Desk in Built Environments Library"/>
                 </div>
                 <div className="lib-card-content">
                     <div >
-                        <p>Suzzalo Library the most famous library at the University of Washington.
-                                Featuring over 350,000 square feet of study space with accessible ramps at the front of the
-                                Red Square entrace.</p>
+                        <p>The Built Environment library is locarted in Gould Hall.
+                            Inside the library includes various collections from the Arts Library in the design fields!
+                            Areas of knowledge in the library include architecture, construction management, landscape architecture, real estate studies, and urban design and planning!
+                            The basement of the buidling features a Digital Commons for poster for all your project needs!
+                        </p>
                         <ol>
                             <ul>Operating Hours: 9:00am-5:00pm</ul>
                             <ul>Noise Rating: Mediocre</ul>
@@ -29,12 +31,12 @@ export function BuiltEnvironment() {
             <div className="lib-card">
                 <div className="lib-card-content">
                     <div>
-                        <img src="img/UW+Suzzallo+Library+Starbucks.jpg"
-                        alt="Tables inside Suzzallo Starbucks" className="library-photos"/>
+                        <img src="img/The Buzz Cafe.jpg"
+                        alt="Tables infront of the Buzz Cafe" className="library-photos"/>
                     </div>
                     <div>
                         <p>Inside you will find a <a
-                            href="https://hfs.uw.edu/Eat/dining-hours/Starbucks-Coffee-Suzzallo">starbucks</a>. With
+                            href="https://hfs.uw.edu/Eat/dining-hours/Starbucks-Coffee-Suzzallo">The Buzz Coffee Shop </a>. With
                         plenty of study tables and space for socializing!</p>
                     </div>
                 </div>   

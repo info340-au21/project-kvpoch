@@ -5,21 +5,26 @@ export function Odegaard() {
         <div>
             <div>
                 <h2>
-                    Suzzalo Library
+                    Odegaard Undergraduate Library
                 </h2>
             </div>
             <div className="lib-card">
                 <div>
-                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/Odegaard Library.jpg" alt="Desks at Suzzallo Library"/>
                 </div>
                 <div className="lib-card-content">
                     <div >
-                        <p>Suzzalo Library the most famous library at the University of Washington.
-                                Featuring over 350,000 square feet of study space with accessible ramps at the front of the
-                                Red Square entrace.</p>
+                        <p><em>AS OF AUTUMN 2021 HUSKY CARD REQUIRED FOR ENTRY</em></p>
+                        <p>Odegaard popular amongst the undergraduate student population. Features 3 floors of space for studying,
+                            socializing, and content creating! First floor typically belongs to those in groups and people that have
+                            laptops. Second floor features an area dedicated to people in need for computer access and all technology needs!
+                            Thrid floor features a silent library for those that need a quieter space compared to the social atmosphere of the
+                            first floor.
+                        </p>
+                        <p>Has as an elevator to the right after entering through the Red Square entrance doors!</p>
                         <ol>
-                            <ul>Operating Hours: 9:00am-5:00pm</ul>
-                            <ul>Noise Rating: Mediocre</ul>
+                            <ul>Operating Hours: 8:00am-12:00am</ul>
+                            <ul>Noise Rating: Varies</ul>
                             <ul>Accessibility Rating: High</ul>
                         </ol>
                             <a href="/review">Add a Review!</a>
@@ -29,13 +34,13 @@ export function Odegaard() {
             <div className="lib-card">
                 <div className="lib-card-content">
                     <div>
-                        <img src="img/UW+Suzzallo+Library+Starbucks.jpg"
-                        alt="Tables inside Suzzallo Starbucks" className="library-photos"/>
+                        <img src="img/By George Cafe.jpg"
+                        alt="By George Cafe Cashier Desk" className="library-photos"/>
                     </div>
                     <div>
-                        <p>Inside you will find a <a
-                            href="https://hfs.uw.edu/Eat/dining-hours/Starbucks-Coffee-Suzzallo">starbucks</a>. With
-                        plenty of study tables and space for socializing!</p>
+                        <p>On the basement level of the floor you will find <a
+                            href="https://hfs.uw.edu/Eat/dining-hours/By-George">By George</a>. With
+                        plenty different food options, study tables and space for socializing!</p>
                     </div>
                 </div>   
             </div>

@@ -5,40 +5,29 @@ export function Arts() {
         <div>
             <div>
                 <h2>
-                    Suzzalo Library
+                    Arts Library
                 </h2>
             </div>
             <div className="lib-card">
                 <div>
-                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/Arts library.jpeg" alt="Desks at the Arts Library"/>
                 </div>
                 <div className="lib-card-content">
                     <div >
-                        <p>Suzzalo Library the most famous library at the University of Washington.
-                                Featuring over 350,000 square feet of study space with accessible ramps at the front of the
-                                Red Square entrace.</p>
+                        <p>The Arts library contains a wide variety of books, journals, and media from art history!
+                            You are not allowed to bring in food and drinks.
+                            If you're looking for a more quiet space for studying and want to option to appreciate some art
+                            this might be the place for you!
+                            </p>
                         <ol>
-                            <ul>Operating Hours: 9:00am-5:00pm</ul>
-                            <ul>Noise Rating: Mediocre</ul>
-                            <ul>Accessibility Rating: High</ul>
+                            <ul>Operating Hours: 1:00pm-5:00pm</ul>
+                            <ul>Noise Rating: Low</ul>
+                            <ul>Accessibility Rating: Mediocre</ul>
                         </ol>
                             <a href="/review">Add a Review!</a>
                         </div>
                     </div>
                 </div>
-            <div className="lib-card">
-                <div className="lib-card-content">
-                    <div>
-                        <img src="img/UW+Suzzallo+Library+Starbucks.jpg"
-                        alt="Tables inside Suzzallo Starbucks" className="library-photos"/>
-                    </div>
-                    <div>
-                        <p>Inside you will find a <a
-                            href="https://hfs.uw.edu/Eat/dining-hours/Starbucks-Coffee-Suzzallo">starbucks</a>. With
-                        plenty of study tables and space for socializing!</p>
-                    </div>
-                </div>   
-            </div>
         </div>
     )
 }

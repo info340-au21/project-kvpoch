@@ -5,40 +5,33 @@ export function EastAsia() {
         <div>
             <div>
                 <h2>
-                    Suzzalo Library
+                    Tateuchi East Asia Library
                 </h2>
             </div>
             <div className="lib-card">
                 <div>
-                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/East Asia Library.jpg" alt="Center view of inside East Asia Library"/>
                 </div>
                 <div className="lib-card-content">
                     <div >
-                        <p>Suzzalo Library the most famous library at the University of Washington.
-                                Featuring over 350,000 square feet of study space with accessible ramps at the front of the
-                                Red Square entrace.</p>
+                        <p>The Tateuchi East Asia Library is located in Gowen Hall. Recently named Tateuchi East Asia Library after
+                            the library receieved a 6 million dollar endowment from the Atsuhiko and Ina Goodwin Tateuchi Foundation!
+                        </p>
+                        <p>
+                        Includes a bunch of research guides on the countries of East Asia! Accessibility is also high with ramps
+                        leading to Gowen Hall and includes an elevator that brings to the front entrance of the library!
+                        The library includes plenty of space for studying and contains plenty of computers and printers/scanners
+                        for reserach and references.
+                        </p>
                         <ol>
-                            <ul>Operating Hours: 9:00am-5:00pm</ul>
-                            <ul>Noise Rating: Mediocre</ul>
+                            <ul>Operating Hours: ea9:00am-5:00pm</ul>
+                            <ul>Noise Rating: Low</ul>
                             <ul>Accessibility Rating: High</ul>
                         </ol>
                             <a href="/review">Add a Review!</a>
                         </div>
                     </div>
                 </div>
-            <div className="lib-card">
-                <div className="lib-card-content">
-                    <div>
-                        <img src="img/UW+Suzzallo+Library+Starbucks.jpg"
-                        alt="Tables inside Suzzallo Starbucks" className="library-photos"/>
-                    </div>
-                    <div>
-                        <p>Inside you will find a <a
-                            href="https://hfs.uw.edu/Eat/dining-hours/Starbucks-Coffee-Suzzallo">starbucks</a>. With
-                        plenty of study tables and space for socializing!</p>
-                    </div>
-                </div>   
-            </div>
         </div>
     )
 }

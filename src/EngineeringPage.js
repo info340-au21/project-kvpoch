@@ -5,18 +5,22 @@ export function Engineering() {
         <div>
             <div>
                 <h2>
-                    Suzzalo Library
+                    Engineering Library
                 </h2>
             </div>
             <div className="lib-card">
                 <div>
-                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/Engineering Library.jpg" alt="Front Side of the Engineering Library"/>
                 </div>
                 <div className="lib-card-content">
                     <div >
-                        <p>Suzzalo Library the most famous library at the University of Washington.
-                                Featuring over 350,000 square feet of study space with accessible ramps at the front of the
-                                Red Square entrace.</p>
+                        <p>The Engineering Library features a huge collection of engineering databases and engineering collections
+                            With over 237,297 physcial items in the library for all your engineering reserach studies. The large spaced library 
+                            comes with 4 floors and a basement, meaning there is plenty of space for studying!
+                        </p>
+                        <p>
+                            Study rooms are booked by <a href="https://www.lib.washington.edu/engineering/reserving-study-rooms">reservations</a> and 
+                            rooms are allowed to be reserved by an individual for a maximum of 3 hours per day!</p>
                         <ol>
                             <ul>Operating Hours: 9:00am-5:00pm</ul>
                             <ul>Noise Rating: Mediocre</ul>
@@ -26,19 +30,6 @@ export function Engineering() {
                         </div>
                     </div>
                 </div>
-            <div className="lib-card">
-                <div className="lib-card-content">
-                    <div>
-                        <img src="img/UW+Suzzallo+Library+Starbucks.jpg"
-                        alt="Tables inside Suzzallo Starbucks" className="library-photos"/>
-                    </div>
-                    <div>
-                        <p>Inside you will find a <a
-                            href="https://hfs.uw.edu/Eat/dining-hours/Starbucks-Coffee-Suzzallo">starbucks</a>. With
-                        plenty of study tables and space for socializing!</p>
-                    </div>
-                </div>   
-            </div>
         </div>
     )
 }
