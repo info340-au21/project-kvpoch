@@ -11,7 +11,7 @@ import HEADER_INFO from './data/header.json';
 
 function App() {
     const [homepageLibCards, setHomepageLibCards] = useState(null);
-    let homepageLibCards = fetch('./data/homepage_cards.json')
+    fetch('./data/homepage_cards.json')
         .then(function(response) {
             return response.json();
         })
