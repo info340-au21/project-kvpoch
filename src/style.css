@@ -40,6 +40,7 @@ nav a {
     margin-right: 20px;
 }
 
+
 /*
 Deploys our cards for each library
 Default styles are for mobile devices
@@ -348,7 +349,7 @@ Media queries for different sizes of screen
         flex: 0 0 500px;
     }
     
-
+    
     
 }
 

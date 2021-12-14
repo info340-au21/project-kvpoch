@@ -1,22 +1,23 @@
 import React from 'react';
 
-export function LibInfo() {
+export function Allen() {
     return (
         <div>
             <div>
                 <h2>
-                    Suzzalo Library
+                    Allen Library
                 </h2>
             </div>
             <div className="lib-card">
                 <div>
-                    <img src="img/Suzallo-Desks.jpg" alt="Desks at Suzzallo Library"/>
+                    <img src="img/allen library.png" alt="Sun shining on Allen library Library"/>
                 </div>
                 <div className="lib-card-content">
                     <div >
-                        <p>Suzzalo Library the most famous library at the University of Washington.
-                                Featuring over 350,000 square feet of study space with accessible ramps at the front of the
-                                Red Square entrace.</p>
+                        <p>Allen Library is connected to Suzzalo Library they link behind Suzzalo and provides plenty of floor space for studying.
+                            Allen Library features many floors filled with books and various forms of media! Including floors with DVDs and Media Storage!
+                            On the ground floor apart from privately rated study space it also boasts plenty of governmnet publications and maps!
+                            With plently of elevators and ramps located throughout the building accessibilty in the library is very high!</p>
                         <ol>
                             <ul>Operating Hours: 9:00am-5:00pm</ul>
                             <ul>Noise Rating: Mediocre</ul>
