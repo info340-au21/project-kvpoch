@@ -38,6 +38,12 @@ nav a {
 
 .top-nav-content {
     margin-right: 20px;
+
+}
+
+.top-nav-content a:hover{
+    color: goldenrod;
+
 }
 
 /*
@@ -226,7 +232,14 @@ CSS styles for the Filter page
     top:0px;
   }
 
-  
+  .reviewFilter{
+      font-size: 1.2em;
+      color:gray;
+  }
+
+  .filterButtons:hover {
+    color: purple;
+  }
 
 /*CSS formmatting for our unique library pages*/
 
