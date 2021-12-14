@@ -1,4 +1,3 @@
-
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {HomePage} from './Homepage';
 import {Footer} from './Footer';
@@ -13,12 +12,29 @@ import {Engineering} from './EngineeringPage';
 import {Foster} from './FosterBuisnessPage';
 import {Odegaard} from './OdegaardUnderPage';
 import {Review} from './Reviews';
+import { useEffect, useState } from 'react';
+import HOME_PAGE_LIB_CARDS from './data/homepage_cards.json';
+import HEADER_INFO from './data/header.json';
 
-function App(props) {
+function App() {
+    const [homepageLibCards, setHomepageLibCards] = useState(null);
+    fetch('./data/homepage_cards.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            setHomepageLibCards(json);
+            console.log('parsed json', json);
+        })
+        .catch(function(err) {
+            console.log('parsing failed', err);
+        });
+
     return <BrowserRouter>
         <div>
             <Navigation />
             <Routes>
+<<<<<<< HEAD
                 <Route path="/" element={<HomePage cards={props.home} />} />
                 <Route path="/SuzzaloPage" element={<Suzzalo />} />
                 <Route path="/ArtsPage" element={<Arts />} />
@@ -28,6 +44,10 @@ function App(props) {
                 <Route path="/EngineeringPage" element={<Engineering />} />
                 <Route path="/FosterBuisnessPage" element={<Foster />} />
                 <Route path="/OdegaardUnderPage" element={<Odegaard />} />
+=======
+                <Route path="/" element={<HomePage cards={homepageLibCards} />} />
+                <Route path="/lib_info" element={<LibInfo />} />
+>>>>>>> a9b779c28617adfd4c6472176cb66374df016412
                 <Route path="/filter" element={<Filter />} />
                 <Route path="/review" element={<Review />} />
             </ Routes>

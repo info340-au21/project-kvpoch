@@ -4,7 +4,8 @@
         "feature": [
             {
                 "cafe": false,
-                "noise": "medium",
+                "noise_low": false,
+                "noise_medium": true,
                 "computers": true,
                 "outdoor": true
             }
@@ -15,7 +16,8 @@
         "feature": [
             {
                 "cafe": true,
-                "noise": "low",
+                "noise_low": true,
+                "noise_medium": false,
                 "computers": true,
                 "outdoor": false
             }
@@ -26,7 +28,8 @@
         "feature": [
             {
                 "cafe": false,
-                "noise": "low",
+                "noise_low": true,
+                "noise_medium": false,
                 "computers": true,
                 "outdoor": false
             }
@@ -37,7 +40,8 @@
         "feature": [
             {
                 "cafe": false,
-                "noise": "low",
+                "noise_low": true,
+                "noise_medium": false,
                 "computers": true,
                 "outdoor": false
             }
@@ -48,7 +52,8 @@
         "feature": [
             {
                 "cafe": false,
-                "noise": "low",
+                "noise_low": true,
+                "noise_medium": false,
                 "computers": false,
                 "outdoor": false
             }
