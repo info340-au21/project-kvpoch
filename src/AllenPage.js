@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function LibInfo() {
+export function Allen() {
     return (
         <div>
             <div>
