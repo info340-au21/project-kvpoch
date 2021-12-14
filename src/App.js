@@ -34,8 +34,7 @@ function App() {
         <div>
             <Navigation />
             <Routes>
-<<<<<<< HEAD
-                <Route path="/" element={<HomePage cards={props.home} />} />
+                <Route path="/" element={<HomePage cards={homepageLibCards} />} />
                 <Route path="/SuzzaloPage" element={<Suzzalo />} />
                 <Route path="/ArtsPage" element={<Arts />} />
                 <Route path="/AllenPage" element={<Allen />} />
@@ -44,10 +43,6 @@ function App() {
                 <Route path="/EngineeringPage" element={<Engineering />} />
                 <Route path="/FosterBuisnessPage" element={<Foster />} />
                 <Route path="/OdegaardUnderPage" element={<Odegaard />} />
-=======
-                <Route path="/" element={<HomePage cards={homepageLibCards} />} />
-                <Route path="/lib_info" element={<LibInfo />} />
->>>>>>> a9b779c28617adfd4c6472176cb66374df016412
                 <Route path="/filter" element={<Filter />} />
                 <Route path="/review" element={<Review />} />
             </ Routes>
